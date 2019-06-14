@@ -45,7 +45,20 @@ git push origin --all(to push all the branches)
   a)Thsi is used for fast forward merge This helps in scenarios when ever a new feature is developed on the branch if you want to incl    ude that new feature on the top of the commit history of the master branch
   b)We can change the  commit history
     git rebase -i HEAD~4
-7.Cherry-picking
-8.Git stash
-9.git squash
-s10.Tagging
+7.Cherry-picking:In both merge and rebase all the comits are moved into master branch but in cherry-pick we are seleteing a particular
+                 commitId       (git cherry-pick commitid)
+8.Git stash: The files that are present in stagging area ,untracked sectiona and .gitiginore can be left over and we can start the new  functionality 
+  The advantage is unfinished functionality can be left over and we can start the new functionality
+  git stash  ----->The files present in staggig area can be hidden
+  git stash -u ---->the files presetn in untracked and stagging area can be hidden
+  git stash -a  ---->The files present in untracked ,stagging,.gitignore can be left over
+  git stash pop --->To bring the latest stash to be popped out
+  git stash list  -->To list all the stashes
+9.git squash:Multiple commits can be made as one single commit using git rebase command
+10.Tagging:Tagging is generally used for placing bookmarks on the comits .These are generally given for important commits and relea               se of the software
+  git tag tagname        ---------------------------->light weight tag
+  git tag   ----------------------------------------->to list the tags
+  git tag -a tagnaem -m "message" comitid         --->Anoted tag name
+  git push --tags        ------->To push all the tags
+  git tag -d tagname   --------->to delete a tag in locla repo
+  git push origin :tagname  --->to delte a tag im github
